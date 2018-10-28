@@ -1,7 +1,7 @@
 /*** INITIALISATION ***/
 var JEU = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];	//JEU = [ligne0, ligne1, ligne2, ligne3, ligne4, ligne5]
 var player=1;
-var cote=100;	//La largeur de la case, a changer en fonction de l'affichage
+var cote=70;	//La largeur de la case, a changer en fonction de l'affichage
 
 
 while (true){	//Boucle principale
@@ -172,7 +172,7 @@ function verifDiag(player){
 	for (var j=1; j<=3; j++){	//Ligne appartenant a la diagonale a tester.
 		for (var k=0; k<=2; k++){	//Deplace le test de k unites dans la diagonale
 			if (j+0+k>6 || j+1+k>6 || j+2+k>6 ||j+3+k>6){continue;}	//Si le test tente d'acceder a des cases inexistantes
-			if (JEU[0+k][j+0+k]==player && JEU[1+k][j+1+k]==player && JEU[2+k][j+1+k]==player && JEU[3+k][j+3+k]==player){return true;}	//Si il existe une serie de 4 valeurs identiques.
+			if (JEU[0+k][j+0+k]==player && JEU[1+k][j+1+k]==player && JEU[2+k][j+2+k]==player && JEU[3+k][j+3+k]==player){return true;}	//Si il existe une serie de 4 valeurs identiques.
 		}
 	}
 	for (var i=0; i<=2; i++){
